@@ -23,7 +23,7 @@ Choose rank r yourself. Perform Gradient Descent till convergence, plot the sele
 
 Vary region size (NxN) for N = [20, 40, 60, 80] and perform Gradient Descent till convergence. Again, consider the two cases for your region as mentioned in Part (a). Demonstrate the variation in reconstruction quality by making appropriate plots and metrics. 
 
-Write a function using this reference and use alternating least squares instead of gradient descent to repeat Part 1, 2 of Q5, using your written function. 
+Write a function using this [reference](https://pytorch.org/docs/stable/generated/torch.linalg.lstsq.html) and use alternating least squares instead of gradient descent to repeat Part 1, 2 of Q1, using your written function. 
 
 Data Compression- Here, ground truth pixel values are not missing- you have access to them. You want to explore the use of matrix factorisation in order to store them more efficiently.
 
