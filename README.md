@@ -1,8 +1,8 @@
 # Super-Resolution-and-Image-Reconstruction
 
-Begin by exploring the instructor's notebook that introduces the application of Random Fourier Features (RFF) for image reconstruction. Demonstrate the following applications using the cropped image from the notebook:
+Begin by exploring the [notebook](https://github.com/nipunbatra/ml-teaching/blob/master/notebooks/siren.ipynb) that introduces the application of Random Fourier Features (RFF) for image reconstruction. Here I demonstrated the following applications using the cropped image from the notebook:
 
-Superresolution: perform superresolution on the image shown in notebook to enhance its resolution by factor 2. Show a qualitative comparison of original and reconstructed image. 
+1. Superresolution: perform superresolution on the image shown in notebook to enhance its resolution by factor 2. Show a qualitative comparison of original and reconstructed image. 
 The above only helps us with a qualitative comparison. Let us now do a quantitative comparison. First, skim read this article: https://github.com/sgrvinod/a-PyTorch-Tutorial-to-Super-Resolution 
 Start with a 400x400 image (ground truth high resolution).
 Resize it to a 200x200 image (input image)
@@ -11,11 +11,11 @@ Compute the following metrics:
 RMSE on predicted v/s ground truth high resolution image
 Peak SNR
 Completing Image with Random Missing Data: Apply RFF to complete the image with 10%, 20%, and so on up to 90% of its data missing randomly. Randomly remove portions of the data, train the model on the remaining data, and predict on the entire image. Display the reconstructed images for each missing data percentage and show the metrics calculated above. What do you conclude?. 
-Use the instructor's notebook on matrix factorisation, and solve the following questions.
+Use the [notebook](https://github.com/nipunbatra/ml-teaching/blob/master/notebooks/movie-recommendation-knn-mf.ipynb) on matrix factorisation, and solve the following questions.
 
-Image Reconstruction- Here, ground truth pixel values are missing for particular regions within the image- you don't have access to them.
+2. Image Reconstruction- Here, ground truth pixel values are missing for particular regions within the image- you don't have access to them.
 
-Use the above image from Q4 and reconstruct the image in the following two cases, where your region is-
+Use the above image from Q1 Super resolution and reconstruct the image in the following two cases, where your region is-
 
 a rectangular block of 30X30 is assumed missing from the image.
 a random subset of 900 (30X30) pixels is missing from the image.
@@ -31,9 +31,4 @@ Consider an image patch of size (NxN) where N=50. We are trying to compress this
 a patch with mainly a single color.
 a patch with 2-3 different colors.
 a patch with at least 5 different colors.
-Vary the low-rank value as r = [5, 10, 25, 50] for each of the cases. Use Gradient Descent and plot the reconstructed patches over the original image (retaining all pixel values outside the patch, and using your learnt compressed matrix in place of the patch) to demonstrate difference in reconstruction quality. Write your observations.
-
-
-Here is a reference set of patches chosen for each of the 3 cases from left to right.
-
-Image 1 Image 2 Image 3
+Vary the low-rank value as r = [5, 10, 25, 50] for each of the cases. Use Gradient Descent and plot the reconstructed patches over the original image (retaining all pixel values outside the patch, and using your learnt compressed matrix in place of the patch) to demonstrate difference in reconstruction quality.
